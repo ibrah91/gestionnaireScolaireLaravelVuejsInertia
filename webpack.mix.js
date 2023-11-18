@@ -8,6 +8,7 @@ mix.alias({
 
 mix.js("resources/js/app.js", "public/js")
     .vue()
+    //création de l'alias
     .webpackConfig({
         resolve: {
             alias:{

@@ -10,7 +10,7 @@ class NiveauScolaire extends Model
     use HasFactory;
     protected $fillable = ['nom'];
 
-    public function etudiant(){
+    public function etudiants(){
         return $this->hasMany(Etudiant::class,'');
     }
 }

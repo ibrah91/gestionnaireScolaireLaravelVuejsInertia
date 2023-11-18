@@ -1,7 +1,7 @@
 import "./bootstrap";
 
 import { createApp, h } from "vue";
-// Link est ajoter ici pour être ici en utilisation globale
+// Link est ajouter ici pour être ici en utilisation globale
 import { createInertiaApp, Link } from "@inertiajs/inertia-vue3";
 import MainLayout from "./layouts/MainLayout.vue";
 

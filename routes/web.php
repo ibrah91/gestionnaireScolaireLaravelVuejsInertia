@@ -12,10 +12,13 @@ Route::get('/', function () {
 
 //Route page creation,edit,delete étudiant
 Route::get('/etudiant',[EtudiantController::class,"index"])->name("etudiant.index");
+Route::post('/etudiant',[EtudiantController::class,"store"])->name("etudiant.store");
 Route::get('/etudiant/create',[EtudiantController::class,"create"])->name("etudiant.create");
-Route::get('/etudiant/edit',[EtudiantController::class,"edit"])->name("etudiant.edit");
+Route::get('/etudiant/edit/{id}',[EtudiantController::class,"edit"])->name("etudiant.edit");
 
 //Route page creation,edit,delete niveau scolaire
 Route::get('/niveauscolaire',[NiveauScolaireController::class,"index"])->name("niveauscolaire.index");
-Route::get('/niveauscolaire/create',[NiveauScolaireController::class,"create"])->name("niveauscolaire.create");
-Route::get('/niveauscolaire/edit',[NiveauScolaireController::class,"edit"])->name("niveauscolaire.edit");
+Route::post('/niveauscolaire/create',[NiveauScolaireController::class,"store"])->name("niveauscolaire.store");
+Route::get('/niveauscolaire/edit/{niveauScolaire}',[NiveauScolaireController::class,"edit"])->name("niveauscolaire.edit");
+Route::put('/niveauscolaire/{niveauScolaire}',[NiveauScolaireController::class,"update"])->name("niveauscolaire.update");
+Route::delete('/niveauscolaire/{niveauScolaire}',[NiveauScolaireController::class,"delete"])->name("niveauscolaire.delete");
